@@ -1,208 +1,115 @@
-\# Intelligent OCR Text Extraction
-
-
+# Intelligent OCR Text Extraction
 
 An Optical Character Recognition (OCR) project that extracts readable text from images using image preprocessing and Tesseract OCR.
 
-
-
-\## Project Overview
-
-
+## Project Overview
 
 This project explores how image processing techniques can improve text recognition. It includes image preprocessing, OCR-based text extraction, text detection, and recognition evaluation.
 
+## Features
 
+- Image upload and display.
+- Image preprocessing using OpenCV.
+- Grayscale conversion and image resizing.
+- Noise removal and thresholding.
+- Text extraction using Tesseract OCR.
+- Text detection with bounding boxes.
+- Word-level confidence scores.
+- Character Error Rate (CER) and Word Error Rate (WER) evaluation.
+- Greedy and Beam Search CTC decoding implementations.
 
-\## Features
+## Technologies Used
 
+- Python
+- OpenCV
+- NumPy
+- Pillow
+- Tesseract OCR
+- Pytesseract
+- Streamlit
+- Jiwer
 
-
-\- Image upload and display.
-
-\- Image preprocessing using OpenCV.
-
-\- Grayscale conversion and resizing.
-
-\- Noise removal and thresholding.
-
-\- Text extraction using Tesseract OCR.
-
-\- Text detection and word-level bounding boxes.
-
-\- Word-level confidence scores.
-
-\- OCR evaluation using Character Error Rate (CER) and Word Error Rate (WER).
-
-\- Greedy and Beam Search CTC decoder learning implementations.
-
-
-
-\## Technologies Used
-
-
-
-\- Python
-
-\- OpenCV
-
-\- NumPy
-
-\- Pillow
-
-\- Tesseract OCR
-
-\- Pytesseract
-
-\- Streamlit
-
-\- Jiwer
-
-
-
-\## Project Structure
-
-
+## Project Structure
 
 ```text
-
 Intelligent-OCR-Text-Extraction/
-
 │
-
 ├── images/
-
-│   └── sample\_text.png
-
+│   └── sample_text.png
 │
-
 ├── outputs/
-
-│   ├── grayscale.png
-
-│   ├── resized.png
-
 │   ├── denoised.png
-
-│   ├── thresholded.png
-
-│   └── detected\_text.png
-
+│   ├── detected_text.png
+│   ├── grayscale.png
+│   ├── resized.png
+│   └── thresholded.png
 │
-
 ├── src/
-
-│   ├── preprocess.py
-
-│   ├── ocr\_engine.py
-
-│   ├── text\_detection.py
-
+│   ├── beam_decoder.py
+│   ├── compare_decoders.py
+│   ├── ctc_decoder.py
 │   ├── evaluate.py
-
-│   ├── ctc\_decoder.py
-
-│   ├── beam\_decoder.py
-
-│   └── compare\_decoders.py
-
+│   ├── ocr_engine.py
+│   ├── preprocess.py
+│   └── text_detection.py
 │
-
 ├── app.py
-
 ├── main.py
-
 ├── requirements.txt
-
-└── README.md
-
+├── README.md
+└── .gitignore
 ```
 
+## Installation and Setup
 
-
-\## Installation
-
-
-
-Clone the repository:
-
-
+### 1. Clone the repository
 
 ```bash
-
 git clone https://github.com/Himani-s-Devadiga/Intelligent-OCR-Text-Extraction.git
-
 cd Intelligent-OCR-Text-Extraction
-
 ```
 
-
-
-Create and activate a virtual environment:
-
-
+### 2. Create a virtual environment
 
 ```bash
-
 python -m venv venv
-
-venv\\Scripts\\activate
-
 ```
 
+### 3. Activate the virtual environment
 
-
-Install dependencies:
-
-
+Windows:
 
 ```bash
+venv\Scripts\activate
+```
 
+### 4. Install dependencies
+
+```bash
 pip install -r requirements.txt
-
 ```
 
+### 5. Install Tesseract OCR
 
+Install Tesseract OCR separately and ensure its executable is accessible to Pytesseract.
 
-Install Tesseract OCR separately and configure its executable path if required.
-
-
-
-\## Run the Application
-
-
+## Run the Application
 
 ```bash
-
 streamlit run app.py
-
 ```
 
+## Learning Outcomes
 
+- Understanding OCR fundamentals.
+- Applying image preprocessing techniques.
+- Performing text detection and recognition.
+- Evaluating OCR output using CER and WER.
+- Understanding CTC decoding, Greedy Search, and Beam Search.
+- Building an interactive OCR application using Streamlit.
 
-\## Learning Outcomes
+## Author
 
+**Himani S K**
 
-
-\- Understanding image preprocessing techniques for OCR.
-
-\- Learning text detection and recognition.
-
-\- Evaluating OCR performance using CER and WER.
-
-\- Understanding CRNN, RNN, LSTM and CTC decoding concepts.
-
-\- Implementing basic Greedy and Beam Search CTC decoders.
-
-
-
-\## Author
-
-
-
-Himani S. Devadiga
-
-
-
-GitHub: https://github.com/Himani-s-Devadiga
-
+GitHub: [Himani-s-Devadiga](https://github.com/Himani-s-Devadiga)
